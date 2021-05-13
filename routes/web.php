@@ -36,7 +36,7 @@ Route::get('arreglos' , function(){
 } );
 
 
-Route::get('paises', function () {
+Route::get("paises", function () {
     $paises =[
         "COLOMBIA" => [
             "capital" => "Bogotá",
@@ -54,13 +54,7 @@ Route::get('paises', function () {
             "poblacion" => 7.359
         ]
     ];
-
-    foreach($paises as $nombrepais => $pais){
-        echo "<h1>$nombrepais</h1>";
-        echo "<pre>";
-        echo ($pais["capital"]);
-        echo ($pais["moneda"]);
-        echo "</pre";
-        echo "<hr />";
-}
+    //invocar la vista
+    //Llevando los datos a ella
+    return view("paises")->with("naciones" , $paises);
 });
