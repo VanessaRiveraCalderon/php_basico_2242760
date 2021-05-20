@@ -58,3 +58,7 @@ Route::get("paises", function () {
     //Llevando los datos a ella
     return view("paises")->with("naciones" , $paises);
 });
+
+Route::get('formulario_buscador' , "MetabuscadorController@formulario_buscador");
+
+Route::post('buscar' , "MetabuscadorController@buscar");
