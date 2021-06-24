@@ -64,3 +64,5 @@ Route::get('paises', function () {
         echo "<hr />";
 }
 });
+
+Route::resource('artistas', 'ArtistaController');
