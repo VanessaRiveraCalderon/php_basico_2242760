@@ -12,4 +12,10 @@ class Customer extends Model
     protected $primaryKey = "CustomerId";
     //Omitir campos de auditoria
     public $timestamps = false;
+
+    //Relacion 1 m Cliente y sus Facturas
+    public function facturas(){
+        //utilizo el metodo de eloquent: hasmany
+        return $this->hasMany('App\Factura', 'CustomerId');
+    }
 }
